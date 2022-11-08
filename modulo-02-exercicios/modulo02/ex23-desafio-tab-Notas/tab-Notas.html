@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Notas</title>
+    <style>
+        body{
+            background-color:rgb(245, 255, 251);
+        }
+
+        table {
+            border-collapse: collapse;
+            height: 60px;
+            width: 400px;
+        }
+        thead > tr > th {
+            border: 1.5px solid blue;
+            background-color: gray;
+            color:white;
+            padding:20px;
+            text-align: center;
+        }
+            
+        td {
+            border: 1.5px solid blue;
+            text-align: center;
+        }
+
+        td.colPrimaria{
+            font-weight: bold;
+          
+        }
+
+        td.media {
+            text-align: left;
+            background-color: gray;
+            font-weight: bold;
+            color:white;
+        }
+        td.valorMedia{
+            text-align: center;
+            background-color: gray;
+            font-weight: bold;
+            color:white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1>Desafio de tabelas</h1>
+    <p>Aprendendo a usar "scope".</p>
+
+    <table>
+        <caption> Notas de aprovação</caption>
+
+        <thead>
+            <tr>
+                <th rowspan="2" scope="col">Área</th>
+                <th rowspan="2" scope="col">Disciplina</th>
+                <th colspan="2" scope="colgroup">Notas</th>
+                <th rowspan="2" scope="col">Média</th>
+            </tr>
+            <tr>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+            </tr>
+
+        </thead>
+        <tbody>
+
+            <tr>
+                <td class="colPrimaria" rowspan="4">Exatas</td>
+                <td>Matemática</td>
+                <td>12</td>
+                <td>15</td>
+                <td>13.5</td>
+            </tr>
+            <tr>
+                <td>Física</td>
+                <td>11</td>
+                <td>09</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Química</td>
+                <td>10</td>
+                <td>13</td>
+                <td>11.5</td>
+            </tr>
+            <tr>
+                <td>Biologia</td>
+                <td>16</td>
+                <td>12</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td class="media" colspan="4">Média de Exatas</td>
+                <td class="valorMedia">12.5</td>
+            </tr>
+            <tr>
+                <td class="colPrimaria" rowspan="2">Humanas</td>
+                <td>História</td>
+                <td>16</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td>11</td>
+                <td>12</td>
+                <td>11.5</td>
+            </tr>
+            <tr>
+                <td class="media" colspan="4">Média de Humanas</td>
+                <td class="valorMedia">13.25</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>
