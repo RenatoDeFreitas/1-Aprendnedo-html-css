@@ -9,15 +9,24 @@
 <body>
     <h1>Exemplo de formulário</h1>
     <form action="" method="get" autocomplete="on">
-        <div>
-            <label for="iemail">E-mail</label>
-            <input type="email" name="email" id="iemail" required autocomplete="email">
-        </div>
-        <br>
-        <div>
-            <label for="itel">Telefone</label>
-            <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\d{4,5}-\{4,5}$"required>
-        </div>
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <div>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome" minlength="5" maxlength="20" required>
+            </div>
+            <br>
+            <div>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" required autocomplete="email">
+            </div>
+            <!-- estudar mais sobre RegEx-->
+            <br>
+            <div>
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\{4,5}$"required>
+            </div>
+        </fieldset>
         <br>
         <div>
             <input type="submit" value="enviar">
