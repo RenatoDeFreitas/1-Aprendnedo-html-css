@@ -1,6 +1,114 @@
 @charset "UTF-8";
 
 /*todas às mídias */
+
+/* Typicla Device Breakpoints 
+--------------------------------
+Pequenas telas: até 600px 
+celular: de 600px até 768px
+Tablet: 768 até 992px
+Desktop: 992px até 1200px
+Grande telas: acima de 1200px
+-----------------------
+W3s
+
+*Extra small devices (phones, 600px and down) 
+@media only screen and (max-width: 600px) {...}
+
+*Small devices (portrait tablets and large phones, 600px and up) 
+@media only screen and (min-width: 600px) {...}
+
+*Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {...}
+
+*Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {...}
+
+*Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {...}
+
+*/
+
+
+/* --- IMPRESSÃO ---*/
 @media print {
+   * {
+    font-family: 'Courier New', Courier, monospace;
+   }
+   
+    body{ background-image: url(../imagens/back-print.jpg);    
+   }
+   main h1 {
+    text-shadow: none;
+    color: black;
+   }
+   main{
+    border: 2px solid black;
+   }
+   main::after{
+    content: 'Esse material foi realizado por Renato Freitas Consultoria e Gestão.';
+    text-decoration: overline;
+    font-size: 20px;
+    background-position:  left bottom;
+   }
+    img#phone{display: none;}
+    img#tablet {display:none;}
+    img#print {display: block;}
+    img#pc {display:none;}
+    img#tv{display:none;}
+}
+
+/*--- Medium telas --- TABLET ---*/
+@media screen and (min-width:768px) and (max-width:992px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    main{
+        width:450px;
+        background-color:rgba(39, 35, 35, 0.897);
+     }
+    h1{
+        color: rgb(252, 246, 246);
+        text-shadow: 2px 2px 2px rgba(201, 204, 8, 0.534);
+    }
+
+    img#phone{display: none;}
+    img#tablet {display:block;}
+    img#print {display: none;}
+    img#pc {display:none;}
+    img#tv{display:none;}
+
+}
+
+/*--- large device --- DESKTOP --- */
+@media screen and (min-width:992px) and (max-width:1200px) {
+    body{
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    main{
+        background-color: rgba(230, 248, 214, 0.911);
+    }
+
+    img#phone{display: none;}
+    img#tablet {display:none;}
+    img#print {display: none;}
+    img#pc {display:block;}
+    img#tv{display:none;}
+
+}
+
+/*-- Extra large device --- GRANDES TELAS ---*/
+@media screen and (min-width: 1200px) {
+    body{
+        background-image: url(../imagens/back-tv.jpg);
+    }
+main{
+    background-color:rgba(208, 236, 235, 0.856);
+}
+    img#phone{display: none;}
+    img#tablet {display:none;}
+    img#print {display: none;}
+    img#pc {display:none;}
+    img#tv{display:block;}
 
 }
