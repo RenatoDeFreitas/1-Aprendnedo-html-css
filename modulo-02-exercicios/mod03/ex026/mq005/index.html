@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Query</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <header>
         <h1>Site: cabeçalho dinâmico</h1>
-        <menu>
+        <span id="burguer" class="material-icons" onclick="clickMenu()" >menu</span>
+        <menu id="itens">
             <ul>
                 <li><a href="#">01-Ambiente</a></li>
                 <li><a href="#">02-Estratégia</a></li>
@@ -36,9 +38,16 @@
 
 
     </main>
+    <script>
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display ='none'
+            } else {
+                itens.style.display ='block'
+            }
+            
+        }
+    </script>
 
-    <footer>
-
-    </footer>
 </body>
 </html>
