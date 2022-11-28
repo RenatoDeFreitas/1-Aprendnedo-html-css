@@ -27,7 +27,7 @@
 @media screen and (min-width: 992px) {
     
     body {
-        background-image: linear-gradient(to top, #6a7508, #b35b2f,#3A6E58);
+        background-image: linear-gradient(to top, #b35b2f,#3A6E58);
     } 
     
     section#login{
@@ -46,8 +46,5 @@
     div#formulario > p {
         font-size: 1.8em;
     }
-    form >div.campo > label{
-        font-size: 1em;
-       
-    }
+   
 }
